@@ -6,13 +6,32 @@
 /*   By: alcristi <alcristi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 23:52:19 by alcristi          #+#    #+#             */
-/*   Updated: 2021/10/13 23:52:20 by alcristi         ###   ########.fr       */
+/*   Updated: 2021/10/14 00:26:06 by alcristi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	printf_number(va_list *ap, char c)
+static int	ft_putstr_fd(char *s, int fd)
+{
+	int	count;
+
+	count = 0;
+	if (!s)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+	while (*s)
+	{
+		write(fd, s, 1);
+		s++;
+		count++;
+	}
+	return (count);
+}
+
+static int	printf_number(va_list *ap, char c)
 {
 	int	count;
 
@@ -36,7 +55,7 @@ int	printf_number(va_list *ap, char c)
 	return (count);
 }
 
-int	verific(va_list *ap, char c)
+static int	verific(va_list *ap, char c)
 {
 	int		count;
 	char	*hex;
@@ -53,7 +72,7 @@ int	verific(va_list *ap, char c)
 	return (count);
 }
 
-int	ft_printf(const char *src, ...)
+static int	ft_printf(const char *src, ...)
 {
 	va_list	ap;
 	int		i;
