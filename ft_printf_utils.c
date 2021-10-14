@@ -1,13 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf_utils.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alcristi <alcristi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/13 23:52:22 by alcristi          #+#    #+#             */
+/*   Updated: 2021/10/13 23:56:00 by alcristi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-int	ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(char * s, int fd)
 {
 	int count;
 
 	count = 0;
 	if (!s)
 	{
-		write(1,"(null)",6);
+		write(1, "(null)", 6);
 		return (6);
 	}
 	while (*s)
@@ -35,11 +47,12 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-int	printf_hex()
+int	printf_hex(void)
 {
-	write(1, "0x",2);
-	return(2);
+	write(1, "0x", 2);
+	return (2);
 }
+
 int	check_base (char *base)
 {
 	int	i;
