@@ -6,7 +6,7 @@
 /*   By: alcristi <alcristi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 23:52:19 by alcristi          #+#    #+#             */
-/*   Updated: 2021/10/14 00:26:06 by alcristi         ###   ########.fr       */
+/*   Updated: 2021/10/14 00:29:02 by alcristi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ static int	verific(va_list *ap, char c)
 	return (count);
 }
 
-static int	ft_printf(const char *src, ...)
+int	ft_printf(const char *src, ...)
 {
 	va_list	ap;
 	int		i;

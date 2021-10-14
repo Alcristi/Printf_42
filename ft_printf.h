@@ -6,7 +6,7 @@
 /*   By: alcristi <alcristi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 23:52:26 by alcristi          #+#    #+#             */
-/*   Updated: 2021/10/14 00:24:16 by alcristi         ###   ########.fr       */
+/*   Updated: 2021/10/14 00:29:08 by alcristi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include<stdlib.h>
 # include<unistd.h>
 
-int		ft_putstr_fd(char *s, int fd);
 int		ft_putchar_fd(char c, int fd);
 size_t	ft_strlen(const char *s);
 int		printf_hex(void);
